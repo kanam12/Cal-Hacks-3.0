@@ -1,0 +1,25 @@
+{
+  "name": "Instant Thesaurus",
+  "description": "Find synonyms at the click of a button",
+  "version": "0.3",
+
+  "permissions": [
+  "contextMenus",
+  "clipboardRead",
+  "clipboardWrite",
+  "tabs",
+  "activeTab",
+  "http://thesaurus.altervista.org/thesaurus/*"
+  ],
+  "background": {
+    "scripts": ["thesaurus.js"]
+  },
+
+  "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }
+  ],
+  "manifest_version": 2
+}
